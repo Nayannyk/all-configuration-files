@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Message</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      background: radial-gradient(circle at top, #2b1055 0%, #160027 45%, #070012 100%);
+      overflow: hidden;
+    }
+
+    .message {
+      position: relative;
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      font-weight: 700;
+      color: transparent;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, #ff7eb3, #ffd166, #7afcff, #ff7eb3);
+      background-size: 300% 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: shimmer 4s linear infinite, wave 2.2s ease-in-out infinite;
+    }
+
+    .message::after {
+      content: "I LOVE YOU MISS POPLU";
+      position: absolute;
+      inset: 0;
+      color: rgba(255, 255, 255, 0.18);
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">I LOVE YOU MISS POPLU</div>
+</body>
+</html>
